@@ -237,15 +237,12 @@ https://github.com/queriSz/GestaoConsultasUVV
 
 Link para o vídeo apresentando e demonstrando o funcionamento do sistema:
 
-**[INSERIR LINK DO VÍDEO AQUI]**
+**https://youtu.be/PT_VCbK980A**
 
 ## Integrantes
 
-- **[NOME DO INTEGRANTE 1]**
-- **[NOME DO INTEGRANTE 2]**
-- **[NOME DO INTEGRANTE 3]**
+- **Quéren Hapuque dos Santos Costa**
 
-Os integrantes devem ser apresentados em ordem alfabética.
 
 ## Projeto acadêmico
 
