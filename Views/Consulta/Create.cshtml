@@ -1,0 +1,69 @@
+@model GestaoConsultasUVV.Models.Consulta
+
+@{
+    ViewData["Title"] = "Nova Consulta";
+}
+
+<div class="consulta-form-container">
+
+    <div class="consulta-form-card">
+
+        <div class="consulta-form-topo">
+            <div>
+                <span class="consultas-tag">AGENDAMENTO</span>
+                <h1>Nova Consulta</h1>
+                <p>Preencha os dados abaixo para cadastrar sua consulta.</p>
+            </div>
+
+            <div class="consulta-form-icone">
+                <img src="~/images/coracao-home.png"
+                    alt="Coração anatômico"
+                    class="icone-coracao-card" />
+            </div>
+        </div>
+
+        <form asp-action="Create" method="post">
+
+            <div asp-validation-summary="All" class="auth-erro"></div>
+
+            <div class="form-grupo">
+                <label asp-for="Especialidade">Especialidade</label>
+                <input asp-for="Especialidade"
+                       placeholder="Ex.: Cardiologia" />
+                <span asp-validation-for="Especialidade"></span>
+            </div>
+
+            <div class="form-grupo">
+                <label asp-for="DataHora">Data e Hora</label>
+                <input asp-for="DataHora"
+                       type="datetime-local" />
+                <span asp-validation-for="DataHora"></span>
+            </div>
+
+            <div class="form-grupo">
+                <label asp-for="Descricao">Descrição</label>
+                <textarea asp-for="Descricao"
+                          class="campo-textarea"
+                          placeholder="Adicione alguma observação sobre a consulta"></textarea>
+                <span asp-validation-for="Descricao"></span>
+            </div>
+
+            <div class="consulta-form-acoes">
+
+                <a asp-action="Index"
+                   class="btn-secundario">
+                    Voltar
+                </a>
+
+                <button type="submit"
+                        class="btn-auth">
+                    Cadastrar Consulta
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

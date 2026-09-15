@@ -1,0 +1,851 @@
+:root {
+    --azul-escuro: #253745;
+    --azul-medio: #4A5C6A;
+    --azul-suave: #9BA8AB;
+    --azul-claro: #DCE8EC;
+    --azul-fundo: #EDF5F7;
+    --branco: #FFFFFF;
+    --texto: #253745;
+    --texto-suave: #6D7D87;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #EDF5F7 0%, #F8FBFC 55%, #E4F0F3 100%);
+    color: var(--texto);
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+header {
+    padding: 18px 4%;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.88) !important;
+    border: 1px solid rgba(155, 168, 171, 0.25) !important;
+    border-radius: 18px;
+    padding: 12px 22px;
+    box-shadow: 0 8px 30px rgba(37, 55, 69, 0.08) !important;
+}
+
+.navbar-brand {
+    color: var(--azul-escuro) !important;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.navbar .nav-link {
+    color: var(--azul-medio) !important;
+    font-weight: 500;
+    margin: 0 5px;
+    border-radius: 10px;
+    padding: 8px 12px !important;
+    transition: 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--azul-escuro) !important;
+    background: var(--azul-fundo);
+}
+
+/* BOTÃO SAIR */
+
+.navbar .btn-outline-danger {
+    color: var(--azul-medio);
+    border: 1px solid var(--azul-suave);
+    border-radius: 10px;
+    padding: 7px 18px;
+    font-weight: 600;
+}
+
+.navbar .btn-outline-danger:hover {
+    background: var(--azul-escuro);
+    border-color: var(--azul-escuro);
+    color: white;
+}
+
+/* ÁREA PRINCIPAL */
+
+main {
+    padding-top: 25px;
+    padding-bottom: 60px;
+}
+
+h1, h2, h3 {
+    color: var(--azul-escuro);
+    font-weight: 700;
+}
+
+/* LINKS */
+
+a {
+    color: var(--azul-medio);
+}
+
+a:hover {
+    color: var(--azul-escuro);
+}
+
+/* RODAPÉ */
+
+.footer {
+    color: var(--texto-suave) !important;
+    border-color: rgba(155, 168, 171, 0.25) !important;
+}
+
+/* PÁGINA INICIAL*/
+
+.hero-home {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+    min-height: 430px;
+    padding: 55px 45px;
+    margin-top: 10px;
+    border-radius: 32px;
+    background: linear-gradient(135deg, #f8fcfd 0%, #e4f2f6 100%);
+    box-shadow: 0 15px 45px rgba(37, 55, 69, 0.08);
+    overflow: hidden;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: #dcecf1;
+    color: var(--azul-medio);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.hero-conteudo h1 {
+    font-size: 3.4rem;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.hero-conteudo > p {
+    max-width: 540px;
+    color: var(--texto-suave);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background: #6f9fb5;
+    color: white !important;
+    padding: 14px 28px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(74, 92, 106, 0.15);
+    transition: 0.2s ease;
+}
+
+.btn-principal:hover {
+    background: var(--azul-medio);
+    transform: translateY(-2px);
+}
+
+/* ILUSTRAÇÃO */
+
+.hero-ilustracao {
+    text-align: center;
+    color: #7fa9bb;
+}
+
+.coracao-saude {
+    font-size: 9rem;
+    line-height: 0.8;
+    font-weight: 200;
+}
+
+.batimento {
+    font-size: 3rem;
+    letter-spacing: -8px;
+    margin-top: -15px;
+}
+
+.hero-ilustracao p {
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* CARDS FUNCIONAIS */
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 28px;
+    margin-bottom: 60px;
+}
+
+.beneficio-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(155, 168, 171, 0.20);
+    border-radius: 22px;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--texto);
+    box-shadow: 0 10px 30px rgba(37, 55, 69, 0.06);
+    transition: 0.25s ease;
+}
+
+a.beneficio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(37, 55, 69, 0.12);
+    color: var(--texto);
+}
+
+.beneficio-icone {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #e1f0f4;
+    color: #527c90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.beneficio-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.beneficio-card p {
+    color: var(--texto-suave);
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+    .hero-home {
+        grid-template-columns: 1fr;
+        padding: 35px 25px;
+        gap: 30px;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 2.5rem;
+    }
+
+    .coracao-saude {
+        font-size: 6rem;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* LOGIN E CADASTRO*/
+
+.auth-container {
+    min-height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px 70px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 470px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(155, 168, 171, 0.22);
+    border-radius: 28px;
+    padding: 42px;
+    box-shadow: 0 18px 50px rgba(37, 55, 69, 0.10);
+}
+
+.auth-icone {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e1f0f4;
+    color: #6f9fb5;
+    font-size: 2.5rem;
+}
+
+.auth-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-titulo h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.auth-titulo p {
+    color: var(--texto-suave);
+    margin: 0;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    font-weight: 600;
+    color: var(--azul-escuro);
+    margin-bottom: 7px;
+}
+
+.form-grupo input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ccdadd;
+    border-radius: 12px;
+    background: #f8fbfc;
+    color: var(--azul-escuro);
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-grupo input:focus {
+    background: white;
+    border-color: #7fa9bb;
+    box-shadow: 0 0 0 3px rgba(127, 169, 187, 0.15);
+}
+
+.form-grupo span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #b35d5d;
+}
+
+.btn-auth {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 13px;
+    margin-top: 5px;
+    background: #6f9fb5;
+    color: white;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.btn-auth:hover {
+    background: var(--azul-medio);
+    transform: translateY(-1px);
+}
+
+.auth-rodape {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 22px;
+    border-top: 1px solid #e4ecee;
+    color: var(--texto-suave);
+}
+
+.auth-rodape a {
+    margin-left: 4px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-erro {
+    color: #a84f4f;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.auth-erro ul {
+    margin: 0;
+    padding: 10px 15px 10px 32px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 576px) {
+    .auth-container {
+        min-height: auto;
+        padding: 25px 5px 50px;
+    }
+
+    .auth-card {
+        padding: 30px 22px;
+        border-radius: 22px;
+    }
+}
+
+/* Esconde a caixa de erro quando não há nenhuma mensagem */
+.auth-erro.validation-summary-valid {
+    display: none;
+}
+
+/* Exibe somente quando houver erro */
+.auth-erro.validation-summary-errors {
+    display: block;
+    padding: 10px 15px;
+}
+
+/* MINHAS CONSULTAS */
+
+.consultas-pagina {
+    padding: 30px 0 70px;
+}
+
+.consultas-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.consultas-topo h1 {
+    margin: 8px 0 6px;
+    font-size: 2.2rem;
+}
+
+.consultas-topo p {
+    margin: 0;
+    color: var(--texto-suave);
+}
+
+.consultas-tag {
+    display: inline-block;
+    background: #dcecf1;
+    color: var(--azul-medio);
+    border-radius: 30px;
+    padding: 7px 14px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.consultas-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(155, 168, 171, 0.20);
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(37, 55, 69, 0.07);
+    overflow: hidden;
+}
+
+.tabela-responsiva {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.consultas-tabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.consultas-tabela thead {
+    background: #e4f1f5;
+}
+
+.consultas-tabela th {
+    padding: 17px 20px;
+    text-align: left;
+    color: var(--azul-escuro);
+    font-size: 0.9rem;
+}
+
+.consultas-tabela td {
+    padding: 18px 20px;
+    border-top: 1px solid #edf2f3;
+    color: var(--texto-suave);
+    vertical-align: middle;
+}
+
+.consultas-tabela tbody tr {
+    transition: 0.2s ease;
+}
+
+.consultas-tabela tbody tr:hover {
+    background: #f8fbfc;
+}
+
+.consultas-tabela td strong {
+    color: var(--azul-escuro);
+}
+
+.acoes-consulta {
+    white-space: nowrap;
+}
+
+.btn-editar,
+.btn-excluir {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: 0.2s ease;
+}
+
+.btn-editar {
+    color: #447d96;
+    background: #e5f3f8;
+    margin-right: 7px;
+}
+
+.btn-editar:hover {
+    color: #315f73;
+    background: #d4eaf2;
+}
+
+.btn-excluir {
+    color: #a45656;
+    background: #fff0f0;
+}
+
+.btn-excluir:hover {
+    color: #823f3f;
+    background: #f9dddd;
+}
+
+/* QUANDO NÃO HÁ CONSULTAS */
+
+.consultas-vazio {
+    text-align: center;
+    padding: 70px 25px;
+}
+
+.vazio-icone {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #e1f0f4;
+    color: #6f9fb5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.consultas-vazio h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.consultas-vazio p {
+    color: var(--texto-suave);
+    max-width: 470px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+    .consultas-topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .consultas-topo .btn-principal {
+        width: 100%;
+        text-align: center;
+    }
+
+    .consultas-tabela th,
+    .consultas-tabela td {
+        min-width: 140px;
+    }
+}
+
+/* NOVA / EDITAR CONSULTA */
+
+.consulta-form-container {
+    display: flex;
+    justify-content: center;
+    padding: 35px 0 70px;
+}
+
+.consulta-form-card {
+    width: 100%;
+    max-width: 720px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(155, 168, 171, 0.20);
+    border-radius: 26px;
+    padding: 38px;
+    box-shadow: 0 15px 40px rgba(37, 55, 69, 0.08);
+}
+
+.consulta-form-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 32px;
+}
+
+.consulta-form-topo h1 {
+    margin: 8px 0 6px;
+    font-size: 2rem;
+}
+
+.consulta-form-topo p {
+    margin: 0;
+    color: var(--texto-suave);
+}
+
+.consulta-form-icone {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+    border-radius: 50%;
+    background: #e1f0f4;
+    color: #6f9fb5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+/* TEXTAREA */
+
+.campo-textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    padding: 13px 15px;
+    border: 1px solid #ccdadd;
+    border-radius: 12px;
+    background: #f8fbfc;
+    color: var(--azul-escuro);
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.campo-textarea:focus {
+    background: white;
+    border-color: #7fa9bb;
+    box-shadow: 0 0 0 3px rgba(127, 169, 187, 0.15);
+}
+
+/* BOTÕES */
+
+.consulta-form-acoes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.consulta-form-acoes .btn-auth {
+    width: auto;
+    min-width: 190px;
+    margin: 0;
+}
+
+.btn-secundario {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid #bccdd2;
+    border-radius: 12px;
+    background: white;
+    color: var(--azul-medio);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.btn-secundario:hover {
+    background: #edf5f7;
+    color: var(--azul-escuro);
+}
+
+
+@media (max-width: 576px) {
+    .consulta-form-card {
+        padding: 28px 20px;
+    }
+
+    .consulta-form-topo {
+        align-items: flex-start;
+    }
+
+    .consulta-form-icone {
+        width: 58px;
+        height: 58px;
+        min-width: 58px;
+        font-size: 2.2rem;
+    }
+
+    .consulta-form-acoes {
+        flex-direction: column-reverse;
+    }
+
+    .consulta-form-acoes .btn-auth,
+    .btn-secundario {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* EXCLUIR CONSULTA */
+
+.delete-aviso {
+    background: #fff4f4;
+    color: #9a4c4c;
+    border: 1px solid #f0d1d1;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.delete-dados {
+    display: grid;
+    gap: 14px;
+}
+
+.delete-item {
+    background: #f8fbfc;
+    border: 1px solid #e1eaed;
+    border-radius: 12px;
+    padding: 14px 16px;
+}
+
+.delete-item span {
+    display: block;
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+}
+
+.delete-item strong {
+    color: var(--azul-escuro);
+}
+
+.btn-excluir-confirmar {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 22px;
+    background: #c96a6a;
+    color: white;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.btn-excluir-confirmar:hover {
+    background: #a94f4f;
+    transform: translateY(-1px);
+}
+
+.brand-icon-anatomico {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.icone-coracao-card {
+    width: 42px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.auth-icone,
+.consulta-form-icone,
+.vazio-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.auth-icone .icone-coracao-card,
+.consulta-form-icone .icone-coracao-card {
+    width: 42px;
+}
+
+.vazio-icone .icone-coracao-card {
+    width: 46px;
+}
+
+/* coração maior da HOME */
+.hero-heart-icon {
+    width: 140px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    object-fit: contain;
+}
+
+.beneficios {
+    max-width: 1120px;
+    margin: 28px auto 60px;
+    gap: 20px;
+}
+
+.beneficio-card {
+    padding: 22px 24px;
+    min-height: 165px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.beneficio-icone {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+}
+
+.beneficio-card h3 {
+    margin-bottom: 7px;
+}
+
+.beneficio-card p {
+    line-height: 1.45;
+}
+
+
+.hero-heart-icon {
+    width: 230px;
+    height: auto;
+    margin: 0 auto 8px;
+}
+
+@media (max-width: 768px) {
+    .beneficios {
+        max-width: 100%;
+    }
+
+    .hero-heart-icon {
+        width: 170px;
+    }
+}
+

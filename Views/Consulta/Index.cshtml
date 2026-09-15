@@ -1,0 +1,101 @@
+@model IEnumerable<GestaoConsultasUVV.Models.Consulta>
+
+@{
+    ViewData["Title"] = "Minhas Consultas";
+}
+
+<section class="consultas-pagina">
+
+    <div class="consultas-topo">
+        <div>
+            <span class="consultas-tag">MINHA ÁREA</span>
+            <h1>Minhas Consultas</h1>
+            <p>Acompanhe e gerencie suas consultas de forma simples.</p>
+        </div>
+
+        <a asp-action="Create" class="btn-principal">
+            + Nova Consulta
+        </a>
+    </div>
+
+    <div class="consultas-card">
+
+        @if (Model != null && Model.Any())
+        {
+            <div class="tabela-responsiva">
+
+                <table class="consultas-tabela">
+                    <thead>
+                        <tr>
+                            <th>Especialidade</th>
+                            <th>Data e Hora</th>
+                            <th>Descrição</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var consulta in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <strong>@consulta.Especialidade</strong>
+                                </td>
+
+                                <td>
+                                    @consulta.DataHora.ToString("dd/MM/yyyy HH:mm")
+                                </td>
+
+                                <td>
+                                    @(string.IsNullOrWhiteSpace(consulta.Descricao)
+                                        ? "Sem descrição"
+                                        : consulta.Descricao)
+                                </td>
+
+                                <td class="acoes-consulta">
+                                    <a asp-action="Edit"
+                                       asp-route-id="@consulta.Id"
+                                       class="btn-editar">
+                                        Editar
+                                    </a>
+
+                                    <a asp-action="Delete"
+                                       asp-route-id="@consulta.Id"
+                                       class="btn-excluir">
+                                        Excluir
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        }
+        else
+        {
+            <div class="consultas-vazio">
+
+                <div class="vazio-icone">
+                    <img src="~/images/coracao-home.png"
+                        alt="Coração anatômico"
+                        class="icone-coracao-card" />
+                </div>
+
+                <h2>Nenhuma consulta cadastrada</h2>
+
+                <p>
+                    Você ainda não possui consultas.
+                    Cadastre sua primeira consulta para começar.
+                </p>
+
+                <a asp-action="Create" class="btn-principal">
+                    Agendar consulta →
+                </a>
+
+            </div>
+        }
+
+    </div>
+
+</section>

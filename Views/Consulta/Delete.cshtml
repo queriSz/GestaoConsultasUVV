@@ -1,0 +1,74 @@
+@model GestaoConsultasUVV.Models.Consulta
+
+@{
+    ViewData["Title"] = "Excluir Consulta";
+}
+
+<div class="consulta-form-container">
+
+    <div class="consulta-form-card">
+
+        <div class="consulta-form-topo">
+            <div>
+                <span class="consultas-tag">EXCLUSÃO</span>
+                <h1>Excluir Consulta</h1>
+                <p>Confira os dados antes de confirmar a exclusão.</p>
+            </div>
+
+            <div class="consulta-form-icone">
+                <img src="~/images/coracao-home.png"
+                    alt="Coração anatômico"
+                    class="icone-coracao-card" />
+            </div>
+        </div>
+
+        <div class="delete-aviso">
+            Tem certeza que deseja excluir esta consulta?
+        </div>
+
+        <div class="delete-dados">
+
+            <div class="delete-item">
+                <span>Especialidade</span>
+                <strong>@Model.Especialidade</strong>
+            </div>
+
+            <div class="delete-item">
+                <span>Data e Hora</span>
+                <strong>@Model.DataHora.ToString("dd/MM/yyyy HH:mm")</strong>
+            </div>
+
+            <div class="delete-item">
+                <span>Descrição</span>
+                <strong>
+                    @(string.IsNullOrWhiteSpace(Model.Descricao)
+                        ? "Sem descrição"
+                        : Model.Descricao)
+                </strong>
+            </div>
+
+        </div>
+
+        <form asp-action="Delete" method="post">
+
+            <input type="hidden" asp-for="Id" />
+
+            <div class="consulta-form-acoes">
+
+                <a asp-action="Index"
+                   class="btn-secundario">
+                    Cancelar
+                </a>
+
+                <button type="submit"
+                        class="btn-excluir-confirmar">
+                    Excluir Consulta
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

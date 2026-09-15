@@ -1,0 +1,62 @@
+@model GestaoConsultasUVV.Models.Usuario
+
+@{
+    ViewData["Title"] = "Cadastre-se";
+}
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <div class="auth-icone">
+            <img src="~/images/coracao-home.png"
+                alt="Coração anatômico"
+                class="icone-coracao-card" />
+        </div>
+
+        <div class="auth-titulo">
+            <h1>Crie sua conta</h1>
+            <p>Cadastre-se para organizar e acompanhar suas consultas.</p>
+        </div>
+
+        <form asp-action="Cadastro" method="post">
+
+            <div asp-validation-summary="All" class="auth-erro"></div>
+
+            <div class="form-grupo">
+                <label asp-for="Nome">Nome</label>
+                <input asp-for="Nome"
+                       placeholder="Digite seu nome" />
+                <span asp-validation-for="Nome"></span>
+            </div>
+
+            <div class="form-grupo">
+                <label asp-for="Email">E-mail</label>
+                <input asp-for="Email"
+                       type="email"
+                       placeholder="seuemail@exemplo.com" />
+                <span asp-validation-for="Email"></span>
+            </div>
+
+            <div class="form-grupo">
+                <label asp-for="Senha">Senha</label>
+                <input asp-for="Senha"
+                       type="password"
+                       placeholder="Crie uma senha" />
+                <span asp-validation-for="Senha"></span>
+            </div>
+
+            <button type="submit" class="btn-auth">
+                Criar conta
+            </button>
+
+        </form>
+
+        <div class="auth-rodape">
+            <span>Já possui uma conta?</span>
+            <a asp-action="Login">Entrar</a>
+        </div>
+
+    </div>
+
+</div>

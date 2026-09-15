@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Início";
+}
+
+<section class="hero-home">
+
+    <div class="hero-conteudo">
+        <span class="hero-tag">
+            SAÚDE ORGANIZADA, VIDA MAIS LEVE
+        </span>
+
+        <h1>
+            Suas consultas<br />
+            em um só lugar
+        </h1>
+
+        <p>
+            Agende, acompanhe e gerencie suas consultas
+            de forma simples, rápida e segura.
+        </p>
+
+        @if (User.Identity != null && User.Identity.IsAuthenticated)
+        {
+            <a asp-controller="Consulta"
+               asp-action="Create"
+               class="btn-principal">
+                Agendar consulta →
+            </a>
+        }
+        else
+        {
+            <a asp-controller="Usuario"
+               asp-action="Cadastro"
+               class="btn-principal">
+                Comece agora →
+            </a>
+        }
+    </div>
+
+    <div class="hero-ilustracao">
+        <img src="~/images/coracao-home.png"
+            alt="Coração anatômico"
+            class="hero-heart-icon" />
+        
+     </div>
+
+        <p>
+            Cuidar de você<br />
+            também é prioridade.
+        </p>
+    </div>
+
+</section>
+
+<section class="beneficios">
+
+    <a asp-controller="Consulta"
+       asp-action="Create"
+       class="beneficio-card">
+
+        <div class="beneficio-icone">▣</div>
+        <h3>Agendar consulta</h3>
+        <p>Cadastre suas consultas de forma rápida e simples.</p>
+    </a>
+
+    <a asp-controller="Consulta"
+       asp-action="Index"
+       class="beneficio-card">
+
+        <div class="beneficio-icone">☷</div>
+        <h3>Meu histórico</h3>
+        <p>Acompanhe todas as suas consultas em um só lugar.</p>
+    </a>
+
+    <div class="beneficio-card">
+        <div class="beneficio-icone">♢</div>
+        <h3>Seus dados protegidos</h3>
+        <p>Suas consultas ficam vinculadas à sua conta.</p>
+    </div>
+
+</section>

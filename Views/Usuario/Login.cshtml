@@ -1,0 +1,55 @@
+@model GestaoConsultasUVV.Models.Usuario
+
+@{
+    ViewData["Title"] = "Entrar";
+}
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <div class="auth-icone">
+            <img src="~/images/coracao-home.png"
+                alt="Coração anatômico"
+                class="icone-coracao-card" />
+        </div>
+
+        <div class="auth-titulo">
+            <h1>Bem-vindo de volta</h1>
+            <p>Entre na sua conta para acessar suas consultas.</p>
+        </div>
+
+        <form asp-action="Login" method="post">
+
+            <div asp-validation-summary="All" class="auth-erro"></div>
+
+            <div class="form-grupo">
+                <label asp-for="Email">E-mail</label>
+                <input asp-for="Email"
+                       type="email"
+                       placeholder="seuemail@exemplo.com" />
+                <span asp-validation-for="Email"></span>
+            </div>
+
+            <div class="form-grupo">
+                <label asp-for="Senha">Senha</label>
+                <input asp-for="Senha"
+                       type="password"
+                       placeholder="Digite sua senha" />
+                <span asp-validation-for="Senha"></span>
+            </div>
+
+            <button type="submit" class="btn-auth">
+                Entrar
+            </button>
+
+        </form>
+
+        <div class="auth-rodape">
+            <span>Ainda não possui uma conta?</span>
+            <a asp-action="Cadastro">Cadastre-se</a>
+        </div>
+
+    </div>
+
+</div>
